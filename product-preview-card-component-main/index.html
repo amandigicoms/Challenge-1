@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Montserrat"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fraunces"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .main {
+        height: 100vh;
+        width: 100%;
+        background: #f3eae3;
+      }
+      .content {
+        display: flex;
+        padding-top: 15%;
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .leftBox {
+        width: 50%;
+      }
+      .rightBox {
+        background-color: white;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        width: 50%;
+        height: 412.5px;
+      }
+      .leftBox img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      body {
+        margin: 0;
+      }
+      .rightContent {
+        padding: 25px;
+        padding-top: 10px;
+      }
+      .rightContent h1 {
+        font-weight: 700;
+        font-size: 2.1rem;
+        margin: 0;
+        line-height: 2rem;
+      }
+      .subtitle {
+        font-family: Montserrat;
+        font-size: 14px;
+        color: #6e7080;
+        letter-spacing: 4px;
+        font-weight: 700;
+      }
+      .description {
+        line-height: 1.5rem;
+        font-family: "Montserrat";
+        font-size: 14px;
+      }
+      .price {
+        display: flex;
+      }
+      .oldPrice {
+        padding-top: 7%;
+        margin-left: 10%;
+        color: #6e7080;
+        font-family: "Fraunces";
+      }
+      .currentPrice {
+        color: hsl(158, 36%, 37%);
+        font-weight: 700;
+        font-size: 38px;
+        font-family: "Fraunces";
+      }
+      .button {
+        background: #3d8168;
+        color: white;
+        padding-top: 6%;
+        padding-bottom: 6%;
+        width: 100%;
+        font-weight: 700;
+        border-radius: 8px;
+        border: none;
+        margin-top: 6%;
+        font-family: "Montserrat";
+      }
+      .mobileImg {
+        display: none;
+      }
+      button:hover {
+        background: hsl(212, 21%, 14%);
+        cursor: pointer;
+      }
+      .button i {
+        margin-right: 14px;
+      }
+      @media screen and (max-width: 375px) {
+        .content {
+          max-width: 340px;
+          display: block;
+        }
+        .leftBox {
+          width: auto;
+          height: auto;
+        }
+        .leftBox img {
+          height: auto;
+          border-top-right-radius: 8px;
+          border-bottom-left-radius: 0px;
+        }
+        .rightBox {
+          width: auto;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 8px;
+          height: auto;
+        }
+        .desktopImg {
+          display: none;
+        }
+        .mobileImg {
+          display: block;
+        }
+        .oldPrice {
+          padding-top: 4%;
+          margin-left: 6%;
+          font-size: 14px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <div class="content">
+        <div class="leftBox">
+          <img
+            class="desktopImg"
+            src="../product-preview-card-component-main/images/image-product-desktop.jpg"
+            alt=""
+          />
+          <img
+            class="mobileImg"
+            src="../product-preview-card-component-main/images/image-product-mobile.jpg"
+            alt=""
+          />
+        </div>
+        <div class="rightBox">
+          <div class="rightContent" style="width: auto">
+            <p class="subtitle">PERFUME</p>
+            <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+            <p class="description">
+              A floral, solar and voluptuous interpretation composed by Olivier
+              Polge, Perfume-Creator for the House of CHANEL.
+            </p>
+            <div class="price">
+              <div class="currentPrice"><span>$149.99</span></div>
+              <div class="oldPrice"><del>$169.99</del></div>
+            </div>
+            <button class="button" role="button">
+              <i class="fa-solid fa-cart-shopping"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
